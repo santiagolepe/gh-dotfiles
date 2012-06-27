@@ -54,7 +54,7 @@ bakcyn="\[\e[46m\]"   # Cyan
 bakwht="\[\e[47m\]"   # White
 txtrst="\[\e[0m\]"    # Text Reset
 
-export PS1="$bldgrn${debian_chroot:+($debian_chroot)}\u$bldred@\H:$txtcyn\w $undylw\$(parse_git_branch)$txtrst\n\$ "
+export PS1="$bldblu${debian_chroot:+($debian_chroot)}\u$bldred@\H:$txtcyn\w $undylw\$(parse_git_branch)$txtrst\n\$ "
 
 # add short cut keys for terminal app
 # Ctrl left   right word
