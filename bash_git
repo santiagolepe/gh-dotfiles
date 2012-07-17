@@ -1,11 +1,17 @@
    function parse_git_dirty {
      git diff --quiet HEAD &>/dev/null
-     [[ $? == 1 ]] && echo "⚡"
+     if [ $? != 1 ]
+     then
+       echo "$"
+     else 
+       echo "⚡"
+     fi
+
    }
    if [ -n  __git_ps1 ]; then
     function parse_git_branch {
       local branch=$(__git_ps1 "%s")
-      [[ $branch ]] && echo "[$branch$(parse_git_dirty)]"
+      [[ $branch ]] && echo "on $branch branch"
     }
     export PS1='\[\033[1;33m\]\w\[\033[0m\]\r\n$ '
    fi

@@ -54,7 +54,7 @@ bakcyn="\[\e[46m\]"   # Cyan
 bakwht="\[\e[47m\]"   # White
 txtrst="\[\e[0m\]"    # Text Reset
 
-export PS1="$bldblu${debian_chroot:+($debian_chroot)}\u$bldred@\H:$txtcyn\w $undylw\$(parse_git_branch)$txtrst\n\$ "
+export PS1="$bldblu${debian_chroot:+($debian_chroot)}\u$bldred@\H:$txtcyn\w $undylw\$(parse_git_branch)$txtrst\n\$(parse_git_dirty) "
 
 # add short cut keys for terminal app
 # Ctrl left   right word
@@ -68,7 +68,8 @@ alias r="rails"
 
 # vim alias
 alias mvimt="mvim --remote-tab"
-alias v="gvim"
+alias v="vim"
+alias gv="gvim"
 alias n="nautilus . &"
 
 # task alias
