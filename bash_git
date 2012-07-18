@@ -11,7 +11,7 @@
    if [ -n  __git_ps1 ]; then
     function parse_git_branch {
       local branch=$(__git_ps1 "%s")
-      [[ $branch ]] && echo "on $branch branch"
+      [[ $branch ]] && echo "⭠ $branch"
     }
     export PS1='\[\033[1;33m\]\w\[\033[0m\]\r\n$ '
    fi
