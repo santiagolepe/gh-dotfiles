@@ -1,4 +1,5 @@
 set match-hidden-files off
+
 set page-completions off
 set completion-query-items 350
 
@@ -20,41 +21,17 @@ export HISTCONTROL=ignoreboth
 source ~/.gh-dotfiles/bash_git
 source ~/.gh-dotfiles/task_completion.sh
 
-txtblk="\[\e[0;30m\]" # Black - Regular
-txtred="\[\e[0;31m\]" # Red
-txtgrn="\[\e[0;32m\]" # Green
-txtylw="\[\e[0;33m\]" # Yellow
-txtblu="\[\e[0;34m\]" # Blue
-txtpur="\[\e[0;35m\]" # Purple
-txtcyn="\[\e[0;36m\]" # Cyan
-txtwht="\[\e[0;37m\]" # White
-bldblk="\[\e[1;30m\]" # Black - Bold
-bldred="\[\e[1;31m\]" # Red
-bldgrn="\[\e[1;32m\]" # Green
-bldylw="\[\e[1;33m\]" # Yellow
-bldblu="\[\e[1;34m\]" # Blue
-bldpur="\[\e[1;35m\]" # Purple
-bldcyn="\[\e[1;36m\]" # Cyan
-bldwht="\[\e[1;37m\]" # White
-unkblk="\[\e[4;30m\]" # Black - Underline
-undred="\[\e[4;31m\]" # Red
-undgrn="\[\e[4;32m\]" # Green
-undylw="\[\e[4;33m\]" # Yellow
-undblu="\[\e[4;34m\]" # Blue
-undpur="\[\e[4;35m\]" # Purple
-undcyn="\[\e[4;36m\]" # Cyan
-undwht="\[\e[4;37m\]" # White
-bakblk="\[\e[40m\]"   # Black - Background
-bakred="\[\e[41m\]"   # Red
-bakgrn="\[\e[42m\]"   # Green
-bakylw="\[\e[43m\]"   # Yellow
-bakblu="\[\e[44m\]"   # Blue
-bakpur="\[\e[45m\]"   # Purple
-bakcyn="\[\e[46m\]"   # Cyan
-bakwht="\[\e[47m\]"   # White
-txtrst="\[\e[0m\]"    # Text Reset
+BRANCH_COLOR="\[\033[42;30m\]"
+ARROW_BRANCH="\[\033[40;32m\]⮀"
+BLACK="\[\033[0;38m\]"
+USER_INFO_ARROW="\[\033[47;30m\]⮀"
+DIRECTORY_COLOR="\[\033[47;30m\]"
+DIRECTORY_ARROW="\[\033[49;37m\]⮀"
+PROMPT_ARROW="\[\033[49;30m\]⮀"
+PROMPT_COLOR="\[\033[40;33m\]"
 
-export PS1="$bakylw$unkblk\$(parse_git_branch)$txtrst$txtylw⮀$bldblu${debian_chroot:+($debian_chroot)}\u$bldred@\H:$txtcyn\w \n$txtrst\$(parse_git_dirty): "
+export PS1="$DIRECTORY_COLOR\$(parse_git_branch) $DIRECTORY_ARROW$PROMPT_COLOR \u ⮁ \h $USER_INFO_ARROW$DIRECTORY_COLOR \W $DIRECTORY_ARROW\n$PROMPT_COLOR\$(parse_git_dirty)$PROMPT_ARROW$BLACK"
+
 
 # add short cut keys for terminal app
 # Ctrl left   right word
@@ -71,6 +48,12 @@ alias mvimt="mvim --remote-tab"
 alias v="vim"
 alias gv="gvim"
 alias n="nautilus . &"
+alias gk="gitk --all"
+
+# git alias
+alias gpair='git config --global user.name "Alberto Alcaraz + Daniel Lopez" ; git config --global user.email "alberto.alcaraz@tangosource.com + daniel.lopez@tangosource.com" '
+alias gme='git config --global user.name "Alberto Alcaraz" ; git config --global user.email "jaalcarazz@yahoo.com" '
+alias gts='git config --global user.name "Alberto Alcaraz" ; git config --global user.email "alberto.alcaraz@tangosource.com" '
 
 # task alias
 alias t="task"
@@ -85,4 +68,3 @@ export EDITOR=vim
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
