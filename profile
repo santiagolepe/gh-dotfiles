@@ -21,8 +21,8 @@ export HISTCONTROL=ignoreboth
 source ~/.gh-dotfiles/bash_git
 source ~/.gh-dotfiles/task_completion.sh
 
-BRANCH_COLOR="\[\033[42;30m\]"
-ARROW_BRANCH="\[\033[40;32m\]⮀"
+BRANCH_COLOR="\[\033[49;43m\]"
+ARROW_BRANCH="\[\033[40;33m\]⮀"
 BLACK="\[\033[0;38m\]"
 USER_INFO_ARROW="\[\033[47;30m\]⮀"
 DIRECTORY_COLOR="\[\033[47;30m\]"
@@ -30,7 +30,7 @@ DIRECTORY_ARROW="\[\033[49;37m\]⮀"
 PROMPT_ARROW="\[\033[49;30m\]⮀"
 PROMPT_COLOR="\[\033[40;33m\]"
 
-export PS1="$DIRECTORY_COLOR\$(parse_git_branch) $DIRECTORY_ARROW$PROMPT_COLOR \u ⮁ \h $USER_INFO_ARROW$DIRECTORY_COLOR \W $DIRECTORY_ARROW\n$PROMPT_COLOR\$(parse_git_dirty)$PROMPT_ARROW$BLACK"
+export PS1="$BRANCH_COLOR\$(parse_git_branch) $ARROW_BRANCH$PROMPT_COLOR \u ⮁ \h $USER_INFO_ARROW$DIRECTORY_COLOR \W $DIRECTORY_ARROW\n$PROMPT_COLOR\$(parse_git_dirty)$PROMPT_ARROW$BLACK"
 
 
 # add short cut keys for terminal app
@@ -51,10 +51,11 @@ alias n="nautilus . &"
 alias gk="gitk --all"
 
 # git alias
-alias gpair='git config --global user.name "Alberto Alcaraz + Daniel Lopez" ; git config --global user.email "alberto.alcaraz@tangosource.com + daniel.lopez@tangosource.com" '
+alias gpair='git config --global user.name "Alberto Alcaraz + Daniel Guzman" ; git config --global user.email "alberto.alcaraz@tangosource.com + daniel.guzman@tangosource.com" '
 alias gme='git config --global user.name "Alberto Alcaraz" ; git config --global user.email "jaalcarazz@yahoo.com" '
 alias gts='git config --global user.name "Alberto Alcaraz" ; git config --global user.email "alberto.alcaraz@tangosource.com" '
-
+alias gconfig='git config --list'
+alias gimpact="git log --shortstat --author \"Alberto Alcaraz\" | grep \"files changed\" | awk '{files+=\$1; inserted+=\$4; deleted+=\$6} END {print \"Files changed:\", files, \"Lines inserted:\", inserted, \"Lines deleted:\", deleted}'"
 # task alias
 alias t="task"
 
