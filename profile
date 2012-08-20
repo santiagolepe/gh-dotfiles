@@ -47,7 +47,6 @@ alias r="rails"
 alias mvimt="mvim --remote-tab"
 alias v="vim"
 alias gv="gvim"
-alias n="nautilus . &"
 alias gk="gitk --all"
 
 # git alias
@@ -56,8 +55,13 @@ alias gme='git config --global user.name "Alberto Alcaraz" ; git config --global
 alias gts='git config --global user.name "Alberto Alcaraz" ; git config --global user.email "alberto.alcaraz@tangosource.com" '
 alias gconfig='git config --list'
 alias gimpact="git log --shortstat --author \"Alberto Alcaraz\" | grep \"files changed\" | awk '{files+=\$1; inserted+=\$4; deleted+=\$6} END {print \"Files changed:\", files, \"Lines inserted:\", inserted, \"Lines deleted:\", deleted}'"
+
 # task alias
 alias t="task"
+alias n="nautilus . &"
+alias :q='exit'
+
+#console alias
 
 # annex alias
 alias gan="git annex"
