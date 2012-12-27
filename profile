@@ -60,6 +60,7 @@ alias gimpact="git log --shortstat --author \"Alberto Alcaraz\" | grep \"files c
 alias t="task"
 alias n="nautilus . &"
 alias :q='exit'
+alias cp_ssh="xclip ~/.ssh/id_rsa.pub | xclip -o | xclip -sel clip"
 
 #console alias
 
