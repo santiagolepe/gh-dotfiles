@@ -47,7 +47,7 @@ alias r="rails"
 alias mvimt="mvim --remote-tab"
 alias v="vim"
 alias gv="gvim"
-alias gk="gitk --all"
+alias gk="gitk --all &"
 
 # git alias
 alias gpair='git config --global user.name "Alberto Alcaraz + Daniel Guzman" ; git config --global user.email "alberto.alcaraz@tangosource.com + daniel.guzman@tangosource.com" '
