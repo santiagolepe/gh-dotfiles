@@ -11,7 +11,7 @@
    if [ -n  __git_ps1 ]; then
     function parse_git_branch {
       local branch=$(__git_ps1 "%s")
-      [[ $branch ]] && echo "⭠ $branch"
+      [[ $branch ]] && echo "⚡ $branch"
     }
    fi
 
