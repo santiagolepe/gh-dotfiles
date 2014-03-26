@@ -21,14 +21,13 @@ export HISTCONTROL=ignoreboth
 source ~/.gh-dotfiles/bash_git
 source ~/.gh-dotfiles/task_completion.sh
 
-BRANCH_COLOR="\[\033[49;43m\]"
-ARROW_BRANCH="\[\033[40;33m\]-"
+BRANCH_COLOR="\[\033[0;34m\]"
 BLACK="\[\033[0;38m\]"
 USER_INFO_ARROW="\[\033[47;30m\]"
 DIRECTORY_COLOR="\[\033[47;30m\]"
 DIRECTORY_ARROW="\[\033[49;37m\]"
 PROMPT_ARROW="\[\033[49;30m\]"
-PROMPT_COLOR="\[\033[40;33m\]"
+PROMPT_COLOR="\[\033[0;32m\]"
 
 export PS1="$DIRECTORY_COLOR$BRANCH_COLOR\$(parse_git_branch) $ARROW_BRANCH$PROMPT_COLOR \u > \h $USER_INFO_ARROW$DIRECTORY_COLOR \W $DIRECTORY_ARROW\n$PROMPT_COLOR\$(parse_git_dirty)$PROMPT_ARROW$BLACK"
 
